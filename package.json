@@ -7,7 +7,7 @@
     "start": "nodemon app.js",
     "start:prod": "NODE_ENV=production nodemon app.js"
   },
-  "author": "Themesbrand",
+  "author": "Nate",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.24.0",
