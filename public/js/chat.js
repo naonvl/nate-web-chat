@@ -152,6 +152,7 @@ socket.on('contactsError', ({ msg }) => {
 
 // Toastr Success Message
 socket.on('Success', ({ msg }) => {
+  console.log('SUCCESS');
   toastr.success(msg, 'Success');
   value = document.getElementById("hide_modal")
   value.click();
@@ -713,6 +714,7 @@ const addNewMessage = ({
 // User Id Wise contact Get
 var isMessages;
 var listUsers;
+console.log('JS USERID: '+ userId);
 socket.emit("userData", { userId });
 
 socket.on("roomUsers", ({ users }) => {

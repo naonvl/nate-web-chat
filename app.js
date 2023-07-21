@@ -450,6 +450,7 @@ io.on("connection", (socket) => {
 
   // User Id Wise contact Get
   socket.on('userData', ({ userId }) => {
+    console.log(userId);
     userJoin(userId).then((res) => {
       io.to(socket.id).emit('roomUsers', {
         users: res

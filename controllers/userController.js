@@ -42,12 +42,12 @@ const createSendToken = (user, statusCode, res, msg) => {
  * Sign Up
  */
 exports.signup = catchAsync(async (req, res, next) => {
-    if (req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
-        return res.status(200).json({
-            status: 'fail',
-            message: 'Please select captcha'
-        });
-    }
+    // if (req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
+    //     return res.status(200).json({
+    //         status: 'fail',
+    //         message: 'Please select captcha'
+    //     });
+    // }
     // Put your secret key here.
     var secretKey = process.env.CAPTCHA_SECRET;
     // req.connection.remoteAddress will provide IP address of connected user.
@@ -83,12 +83,12 @@ exports.signin = catchAsync(async (req, res, next) => {
         });
     }
 
-    if (req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
-        return res.status(200).json({
-            status: 'fail',
-            message: 'Please select captcha'
-        });
-    }
+    // if (req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
+    //     return res.status(200).json({
+    //         status: 'fail',
+    //         message: 'Please select captcha'
+    //     });
+    // }
 
     var secretKey = process.env.CAPTCHA_SECRET;
     // req.connection.remoteAddress will provide IP address of connected user.
